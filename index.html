@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>WebRTC Sesli & Görüntülü Sohbet</title>
+  <style>
+    body { background: #000; color: #0f0; font-family: monospace;
+           display: flex; flex-direction: column; align-items: center;
+           padding: 20px; }
+    #videos { display: flex; gap: 10px; margin-bottom: 1em; }
+    video { width: 320px; height: 240px; background: #333;
+            border: 2px solid #0f0; }
+    #status { margin-bottom: 1em; }
+    button { padding: 0.5em 1em; background: #222; color: #0f0;
+             border: 1px solid #0f0; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Sesli & Görüntülü Sohbet</h1>
+  <div id="videos">
+    <video id="localVideo" autoplay muted playsinline></video>
+    <video id="remoteVideo" autoplay playsinline></video>
+  </div>
+  <p id="status">Durum: Bekleniyor...</p>
+  <button id="startBtn">Bağlan ve Konuş</button>
+  <script src="webrtc.js"></script>
+</body>
+</html>
